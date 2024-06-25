@@ -27,7 +27,15 @@ timm==0.6.7
 tomesd==0.1.2
 torch
 torchdiffeq==0.2.3
-torchsde==0.2.5
 transformers==4.25.1
 
 httpx==0.24.1
+
+# Fix => DEPRECATION: torchsde 0.2.5 has a non-standard dependency specifier numpy>=1.19.*; python_version >= "3.7". pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of torchsde or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+torchsde==0.2.6
+
+# Fix => .venv\lib\site-packages\gradio_client\documentation.py:103: UserWarning: Could not get documentation group for <class 'gradio.mix.Series'>: No known documentation group for module 'gradio.mix'
+gradio-client==0.2.10
+
+# Fix => .venv\lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+huggingface-hub==0.21.4

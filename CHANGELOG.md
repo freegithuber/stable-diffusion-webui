@@ -1,3 +1,15 @@
+## 1.5.2-doc
+
+### Bug Fixes:
+ * Fix bugs caused by dependency version updates
+
+```
+fatal: No names found, cannot describe anything.
+
+This warning is because there is no tag.
+```
+
+
 ## 1.5.2
 
 ### Bug Fixes:
@@ -63,7 +75,7 @@
  * removed thumbs extra networks view mode (use settings tab to change width/height/scale to get thumbs)
  * add always_discard_next_to_last_sigma option to XYZ plot
  * automatically switch to 32-bit float VAE if the generated picture has NaNs without the need for `--no-half-vae` commandline flag.
- 
+
 ### Extensions and API:
  * api endpoints: /sdapi/v1/server-kill, /sdapi/v1/server-restart, /sdapi/v1/server-stop
  * allow Script to have custom metaclass
@@ -74,7 +86,7 @@
  * disable rich exception output in console for API by default, use WEBUI_RICH_EXCEPTIONS env var to enable
  * return http 404 when thumb file not found
  * allow replacing extensions index with environment variable
- 
+
 ### Bug Fixes:
  * fix for catch errors when retrieving extension index #11290
  * fix very slow loading speed of .safetensors files when reading from network drives
@@ -125,7 +137,7 @@
  * read version info form CHANGELOG.md if git version info is not available
  * link footer API to Wiki when API is not active
  * persistent conds cache (opt-in optimization)
- 
+
 ### Extensions:
  * After installing extensions, webui properly restarts the process rather than reloads the UI 
  * Added VAE listing to web API. Via: /sdapi/v1/sd-vae
@@ -134,7 +146,7 @@
  * refactor EmbeddingDatabase.register_embedding() to allow unregistering
  * add before_process callback for scripts
  * add ability for alwayson scripts to specify section and let user reorder those sections
- 
+
 ### Bug Fixes:
  * Fix dragging text to prompt
  * fix incorrect quoting for infotext values with colon in them
